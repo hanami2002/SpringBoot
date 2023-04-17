@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/data/jaxb">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div >
+    <h1>New User</h1>
+    <div >
+        <form th:object="${user}" th:action="@{save}" action="#" method="post">
+            <div>
+                <label th:text="Name" th:for="name"></label>
+                <input type="text" th:field="*{name}"  placeholder="Name"/>
+            </div>
+            <div style="clear: both; display: block; height: 10px"></div>
+            <div>
+                <label th:text="Email" th:for="email"></label>
+                <input type="text" th:field="*{email}"  placeholder="Email"/>
+            </div>
+            <div style="clear: both; display: block; height: 10px"></div>
+            <div>
+                <label th:text="Phone" th:for="phone"></label>
+                <input type="text" th:field="*{phone}"  placeholder="Phone"/>
+            </div>
+            <div style="clear: both; display: block; height: 10px"></div>
+            <div>
+                <label th:text="Pass" th:for="pass"></label>
+                <input type="text" th:field="*{pass}"  placeholder="Pass"/>
+            </div>
+            <div style="clear: both; display: block; height: 10px"></div>
+            <input type="submit"  value="Save"/>
+        </form>
+    </div>
+</div>
+</body>
+</html>
